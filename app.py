@@ -12,7 +12,7 @@ def myapp():
 
     main()
     return send_file(
-        "peripheral_awareness\peripheral_awareness.png", mimetype="image/png"
+        "peripheral_awareness/peripheral_awareness.png", mimetype="image/png"
     )
 
 
