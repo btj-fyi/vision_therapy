@@ -12,7 +12,7 @@ def rl():
 def main():
     w = 1100
     h = 850
-    image = Image.open("peripheral_awareness\peripheral_awareness_blank.png")
+    image = Image.open("~/vision_therapy/peripheral_awareness_blank.png")
     draw = ImageDraw.Draw(image)
 
     def get_on_a(x: int = None, y: int = None) -> int:
@@ -137,7 +137,7 @@ def main():
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     image.save(
-        "peripheral_awareness\peripheral_awareness.png",
+        "~/vision_therapy/peripheral_awareness.png",
     )
 
     # image.show()
