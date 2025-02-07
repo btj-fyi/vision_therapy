@@ -123,7 +123,7 @@ def main():
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     image.save(
-        "vision_therapy/peripheral_awareness.png",
+        "peripheral_awareness/peripheral_awareness.png",
     )
 
     # image.show()
