@@ -9,7 +9,7 @@ def rl():
     return random.choice(uppercase_alphabet)
 
 
-def main():
+def peripheral_awareness():
     w = 1100
     h = 850
     image = Image.open("peripheral_awareness/peripheral_awareness_blank.png")
