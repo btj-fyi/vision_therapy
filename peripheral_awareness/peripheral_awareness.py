@@ -27,7 +27,7 @@ def main():
         if y:
             return ((-1 * (1100 / 850)) * y) - 850
 
-    font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 60)
+    font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 60)
     draw.text((w / 2, h / 2), text=rl(), font=font, fill="red", anchor="mm")
 
     x = 0
@@ -44,7 +44,7 @@ def main():
     yi = get_on_a(x=xl)  # y increment
     yt = y + yi  # y top
     yb = h - yi  # y left
-    font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 85)
+    font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 85)
     draw.text((xl, yt), text=rl(), font=font, anchor="mm")
     draw.text((xc, yt), text=rl(), font=font, anchor="mm")
     draw.text((xr, yt), text=rl(), font=font, anchor="mm")
@@ -68,7 +68,7 @@ def main():
     yi = get_on_a(x=xl)  # y increment
     yt = y + yi  # y top
     yb = h - yi  # y left
-    font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 60)
+    font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 60)
     draw.text((xl, yt), text=rl(), font=font, anchor="mm")
     draw.text((xc, yt), text=rl(), font=font, anchor="mm")
     draw.text((xr, yt), text=rl(), font=font, anchor="mm")
@@ -92,7 +92,7 @@ def main():
     yi = get_on_a(x=xl)  # y increment
     yt = y + yi  # y top
     yb = h - yi  # y left
-    font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 35)
+    font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 35)
     draw.text((xl, yt), text=rl(), font=font, anchor="mm")
     draw.text((xr, yt), text=rl(), font=font, anchor="mm")
     draw.text((xl, yb), text=rl(), font=font, anchor="mm")
