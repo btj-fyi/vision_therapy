@@ -5,7 +5,7 @@ from peripheral_awareness.peripheral_awareness import peripheral_awareness
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/peripheral_awareness_v1")
 def myapp():
     peripheral_awareness()
     return send_file(
