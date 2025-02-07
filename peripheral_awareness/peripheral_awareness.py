@@ -10,11 +10,8 @@ def rl():
 
 
 def main():
-    root = Tk()
     w = 1100
     h = 850
-    canvas = Canvas(root, height=h, width=w)
-    canvas.pack()
     image = Image.open("peripheral_awareness\peripheral_awareness_blank.png")
     draw = ImageDraw.Draw(image)
 
@@ -30,10 +27,6 @@ def main():
         if y:
             return ((-1 * (1100 / 850)) * y) - 850
 
-    canvas.create_line(0, 0, w, h, fill="black")
-    canvas.create_line(0, h, w, 0, fill="black")
-
-    canvas.create_oval(w / 2 - 25, h / 2 - 25, w / 2 + 25, h / 2 + 25, fill="red")
     font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 60)
     draw.text((w / 2, h / 2), text=rl(), font=font, fill="red", anchor="mm")
 
@@ -51,19 +44,6 @@ def main():
     yi = get_on_a(x=xl)  # y increment
     yt = y + yi  # y top
     yb = h - yi  # y left
-
-    font_a = ("Arial", 85)
-    canvas.create_text(xl, yt, text=rl(), font=font_a)
-    canvas.create_text(xc, yt, text=rl(), font=font_a)
-    canvas.create_text(xr, yt, text=rl(), font=font_a)
-
-    canvas.create_text(xl, yc, text=rl(), font=font_a)
-    canvas.create_text(xr, yc, text=rl(), font=font_a)
-
-    canvas.create_text(xl, yb, text=rl(), font=font_a)
-    canvas.create_text(xc, yb, text=rl(), font=font_a)
-    canvas.create_text(xr, yb, text=rl(), font=font_a)
-
     font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 85)
     draw.text((xl, yt), text=rl(), font=font, anchor="mm")
     draw.text((xc, yt), text=rl(), font=font, anchor="mm")
@@ -88,19 +68,6 @@ def main():
     yi = get_on_a(x=xl)  # y increment
     yt = y + yi  # y top
     yb = h - yi  # y left
-
-    font_b = ("Arial", 60)
-    canvas.create_text(xl, yt, text=rl(), font=font_b)
-    canvas.create_text(xc, yt, text=rl(), font=font_b)
-    canvas.create_text(xr, yt, text=rl(), font=font_b)
-
-    canvas.create_text(xl, yc, text=rl(), font=font_b)
-    canvas.create_text(xr, yc, text=rl(), font=font_b)
-
-    canvas.create_text(xl, yb, text=rl(), font=font_b)
-    canvas.create_text(xc, yb, text=rl(), font=font_b)
-    canvas.create_text(xr, yb, text=rl(), font=font_b)
-
     font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 60)
     draw.text((xl, yt), text=rl(), font=font, anchor="mm")
     draw.text((xc, yt), text=rl(), font=font, anchor="mm")
@@ -125,13 +92,6 @@ def main():
     yi = get_on_a(x=xl)  # y increment
     yt = y + yi  # y top
     yb = h - yi  # y left
-
-    font_c = ("Arial", 35)
-    canvas.create_text(xl, yt, text=rl(), font=font_c)
-    canvas.create_text(xr, yt, text=rl(), font=font_c)
-    canvas.create_text(xl, yb, text=rl(), font=font_c)
-    canvas.create_text(xr, yb, text=rl(), font=font_c)
-
     font = ImageFont.truetype(r"C:\Users\System-Pc\Desktop\arial.ttf", 35)
     draw.text((xl, yt), text=rl(), font=font, anchor="mm")
     draw.text((xr, yt), text=rl(), font=font, anchor="mm")
@@ -150,7 +110,6 @@ def main():
     eq2 = x - 550
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in solutions:
-        canvas.create_text(s[0], s[1], text=rl(), font=font_c)
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     # coords 2 and 6
@@ -159,7 +118,6 @@ def main():
     eq2 = y + x - 975
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in [(s[0].evalf(), s[1].evalf()) for s in solutions]:
-        canvas.create_text(s[0], s[1], text=rl(), font=font_c)
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     # coords 3 and 7
@@ -168,7 +126,6 @@ def main():
     eq2 = y - 425
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in solutions:
-        canvas.create_text(s[0], s[1], text=rl(), font=font_c)
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     # coords 8 and 4
@@ -177,7 +134,6 @@ def main():
     eq2 = y - x + 125
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in [(s[0].evalf(), s[1].evalf()) for s in solutions]:
-        canvas.create_text(s[0], s[1], text=rl(), font=font_c)
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     image.save(
