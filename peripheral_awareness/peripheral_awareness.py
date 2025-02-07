@@ -28,7 +28,7 @@ def peripheral_awareness():
             return ((-1 * (1100 / 850)) * y) - 850
 
     font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 60)
-    draw.text((w / 2, h / 2), text=rl(), font=font, fill="red", anchor="mm")
+    draw.circle((w / 2, h / 2, 50), fill="red", anchor="mm")
 
     x = 0
     y = 0
