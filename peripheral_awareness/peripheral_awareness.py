@@ -1,5 +1,4 @@
 from tkinter import *
-from scipy.optimize import fsolve
 import sympy
 from PIL import Image, ImageDraw, ImageFont
 import random
