@@ -36,7 +36,6 @@ def main():
     yc = h / 2
 
     # rectangle A
-    canvas.create_rectangle(110, 85, w - 110, h - 85)
     xi = 110  # x increment
     xl = x + xi  # x left
     xr = w - xi  # x right
@@ -55,12 +54,6 @@ def main():
     draw.text((xr, yb), text=rl(), font=font, anchor="mm")
 
     # rectangle B
-    canvas.create_rectangle(
-        250,
-        get_on_a(x=250),
-        w - 250,
-        get_on_a(x=w - 250),
-    )
     xi = 250  # x increment
     xl = x + xi  # x left
     xr = w - xi  # x right
@@ -79,12 +72,6 @@ def main():
     draw.text((xr, yb), text=rl(), font=font, anchor="mm")
 
     # rectangle C
-    canvas.create_rectangle(
-        470,
-        get_on_a(x=470),
-        w - 470,
-        get_on_a(x=w - 470),
-    )
     xi = 470  # x increment
     xl = x + xi  # x left
     xr = w - xi  # x right
@@ -102,7 +89,6 @@ def main():
     # (x – h)^2 + (y – k)^2 = r^2
     # (x - 550)^2 + (y - 425)^2 =  r^2
     r = 165
-    canvas.create_oval(w / 2 - r, h / 2 - r, w / 2 + r, h / 2 + r, width=2)
 
     # coords 1 and 5
     x, y = sympy.symbols("x y")
