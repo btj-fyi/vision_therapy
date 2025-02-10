@@ -2,46 +2,52 @@ import sympy
 from PIL import Image, ImageDraw, ImageFont
 from random import shuffle
 
-letters = []
+letters: list = []
+count: int = 0
 
 
 def rl() -> str:
     global letters
-    if len(letters) == 0:
-        alphabet: list[str] = [
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z",
-        ]
+    global count
+    alphabet: list[str] = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+    ]
+    if count > 27:
+        count = 0
         letters = alphabet
-        shuffle(letters)
+    if len(letters) == 0:
         print(letters)
+        letters = alphabet
+    shuffle(letters)
     if len(letters) > 0:
         l: str = letters.pop()
-    print(l)
+    print(f"{l}: count = {count}")
+    count += 1
     return l
 
 
@@ -159,7 +165,7 @@ def peripheral_awareness():
         draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
 
     image.save(
-        "peripheral_awareness/peripheral_awareness.png",
+        "static/peripheral_awareness.png",
     )
 
     # image.show()
