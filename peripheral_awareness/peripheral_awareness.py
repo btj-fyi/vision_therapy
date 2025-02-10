@@ -1,12 +1,48 @@
-from tkinter import *
 import sympy
 from PIL import Image, ImageDraw, ImageFont
-import random
+from random import shuffle
+
+letters = []
 
 
-def rl():
-    uppercase_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    return random.choice(uppercase_alphabet)
+def rl() -> str:
+    global letters
+    if len(letters) == 0:
+        alphabet: list[str] = [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z",
+        ]
+        letters = alphabet
+        shuffle(letters)
+        print(letters)
+    if len(letters) > 0:
+        l: str = letters.pop()
+    print(l)
+    return l
 
 
 def peripheral_awareness():

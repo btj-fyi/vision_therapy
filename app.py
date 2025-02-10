@@ -1,4 +1,4 @@
-from flask import Flask, send_file
+from flask import Flask, render_template
 import os
 from peripheral_awareness.peripheral_awareness import peripheral_awareness
 
@@ -8,9 +8,7 @@ app = Flask(__name__)
 @app.route("/peripheral_awareness_v1")
 def myapp():
     peripheral_awareness()
-    return send_file(
-        "peripheral_awareness/peripheral_awareness.png", mimetype="image/png"
-    )
+    return render_template("peripheral_awareness.html")
 
 
 if __name__ == "__main__":
