@@ -86,14 +86,14 @@ def peripheral_awareness():
     yt = y + yi  # y top
     yb = h - yi  # y left
     font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 85)
-    draw.text((xl, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xc, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xl, yc), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yc), text=rl(), font=font, anchor="mm")
-    draw.text((xl, yb), text=rl(), font=font, anchor="mm")
-    draw.text((xc, yb), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yb), text=rl(), font=font, anchor="mm")
+    draw.text((xl, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xc, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xl, yc), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yc), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xl, yb), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xc, yb), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yb), text=rl(), font=font, anchor="mm", fill="black")
 
     # rectangle B
     xi = 250  # x increment
@@ -104,14 +104,14 @@ def peripheral_awareness():
     yt = y + yi  # y top
     yb = h - yi  # y left
     font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 60)
-    draw.text((xl, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xc, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xl, yc), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yc), text=rl(), font=font, anchor="mm")
-    draw.text((xl, yb), text=rl(), font=font, anchor="mm")
-    draw.text((xc, yb), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yb), text=rl(), font=font, anchor="mm")
+    draw.text((xl, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xc, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xl, yc), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yc), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xl, yb), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xc, yb), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yb), text=rl(), font=font, anchor="mm", fill="black")
 
     # rectangle C
     xi = 470  # x increment
@@ -122,10 +122,10 @@ def peripheral_awareness():
     yt = y + yi  # y top
     yb = h - yi  # y left
     font = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 35)
-    draw.text((xl, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yt), text=rl(), font=font, anchor="mm")
-    draw.text((xl, yb), text=rl(), font=font, anchor="mm")
-    draw.text((xr, yb), text=rl(), font=font, anchor="mm")
+    draw.text((xl, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yt), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xl, yb), text=rl(), font=font, anchor="mm", fill="black")
+    draw.text((xr, yb), text=rl(), font=font, anchor="mm", fill="black")
 
     # d = 2r
     # (x – h)^2 + (y – k)^2 = r^2
@@ -138,7 +138,7 @@ def peripheral_awareness():
     eq2 = x - 550
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in solutions:
-        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
+        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm", fill="black")
 
     # coords 2 and 6
     x, y = sympy.symbols("x y")
@@ -146,7 +146,7 @@ def peripheral_awareness():
     eq2 = y + x - 975
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in [(s[0].evalf(), s[1].evalf()) for s in solutions]:
-        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
+        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm", fill="black")
 
     # coords 3 and 7
     x, y = sympy.symbols("x y")
@@ -154,7 +154,7 @@ def peripheral_awareness():
     eq2 = y - 425
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in solutions:
-        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
+        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm", fill="black")
 
     # coords 8 and 4
     x, y = sympy.symbols("x y")
@@ -162,7 +162,7 @@ def peripheral_awareness():
     eq2 = y - x + 125
     solutions = sympy.solve([eq1, eq2], (x, y))
     for s in [(s[0].evalf(), s[1].evalf()) for s in solutions]:
-        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm")
+        draw.text((s[0], s[1]), text=rl(), font=font, anchor="mm", fill="black")
 
     image.save(
         "static/peripheral_awareness.png",
